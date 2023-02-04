@@ -11,14 +11,11 @@ export default function App() {
     <div>
       <div>
           <Navbar />
-
           <div className="home-page">
             <LeftMainPage />
             <RightMainPage />
           </div>
-
       </div>
-    
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />

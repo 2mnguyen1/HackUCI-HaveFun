@@ -2,14 +2,14 @@ import React from 'react'
 import "./Navbar.css"
 import { Link } from "react-router-dom";
 import {Dashboard, Forum, AccountBox} from '@mui/icons-material';
-
+import logo from "../images/helpfun-logo.png"
 
 export default function Navbar() {
   return (
     <div className="navbar">
         <div className='navbar-wrapper'>
             <div className='navbar-logo'>
-                <img className='navbar-logo-icon' alt="" src="" />
+                <img className='navbar-logo-icon' alt="" src={logo} />
                 <span className='logo-icon-name'>HelpFun</span>
             </div>
             <div className='navbar-elements'>
