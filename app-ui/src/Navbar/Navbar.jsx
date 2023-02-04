@@ -16,7 +16,7 @@ export default function Navbar() {
           <span className="logo-icon-name">HelpFun</span>
         </div>
         <div className="navbar-elements">
-          <Link className="navbar-element navbar-home" to="/main">
+          <Link className="navbar-element navbar-home" to="/">
             <Dashboard className="nav-bar-icon" />
           </Link>
 
