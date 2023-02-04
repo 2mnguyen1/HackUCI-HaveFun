@@ -1,63 +1,66 @@
 .navbar {
-    width: 100vw;
-    height: 70px;
-    background-color: #EFF6FF;
-    display: flex;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1;
+  width: 100vw;
+  height: 70px;
+  background-color: #eff6ff;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
-.navbar-wrapper{
-    width: 100%;
-    height: 60%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+.navbar-wrapper {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
-.navbar-logo{
-    margin-left: 50px;
-    display: flex;
-    align-items: center;
+.navbar-logo {
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+}
+.navbar-logo-icon {
+  width: 70px;
+  height: 70px;
+}
 
+.logo-icon-name {
+  font-size: 30px;
+  margin-left: 10px;
+  font-weight: bold;
 }
-.navbar-logo-icon { 
-    width: 70px;
-    height: 70px;
+.navbar-elements {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-.logo-icon-name { 
-    font-size: 30px;
-    margin-left: 10px;
-    font-weight: bold;
+.navbar-profile {
+  width: 53px;
+  height: 53px;
+  left: 1196px;
+  top: 12px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin-right: 50px;
 }
-.navbar-elements{
-    width: 30%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.navbar-profile{
-    width: 53px;
-    height: 53px;
-    left: 1196px;
-    top: 12px;
-    background: #FFFFFF;
-    border-radius: 50%;
-    margin-right: 50px;
-}
-.navbar-element{
-    width: 30%;
-    height: 100%;
-    background: #A0A4A2;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
+.navbar-element {
+  width: 30%;
+  height: 100%;
+  background: #a0a4a2;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
 }
 .navbar-element:active {
-    background-color: #34E0A1;
+  background-color: #34e0a1;
+}
+
+.nav-bar-icon {
+  color: white;
 }

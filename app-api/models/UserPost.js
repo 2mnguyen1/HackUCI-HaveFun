@@ -28,8 +28,8 @@ const UserPostSchema = new mongoose.Schema({
     },
 
     comments: {
-        typeArray,
-        default:[]
+        type: Array,
+        default: []
     }
 
 

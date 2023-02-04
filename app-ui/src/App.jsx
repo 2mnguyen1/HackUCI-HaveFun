@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { BrowserRouter, Routes, Route,  Navigate  } from "react-router-dom";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./LoginPage/Login";
 import Register from "./Register/Register";
 import Navbar from "./Navbar/Navbar";
@@ -13,13 +13,10 @@ export default function App() {
 
   return (
     <div>
-      {user && (
+      <BrowserRouter>
         <div>
           <Navbar />
         </div>
-      )}
-
-      <BrowserRouter>
         <Routes>
           <Route
             path="/"
@@ -32,12 +29,11 @@ export default function App() {
               </div>
             }
           />
-          {!user ? (
-            <>
-              <Route path="/login" element={<Login setUser={setUser} />} />
-              <Route path="/register" element={<Register />} />
-            </>
-          ) : }
+
+          <>
+            <Route path="/login" element={<Login setUser={setUser} />} />
+            <Route path="/register" element={<Register />} />
+          </>
 
           {user && <Route path="/community" element={<Community />} />}
         </Routes>

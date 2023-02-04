@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Community.css";
 import axios from "axios";
+import Countdown from "react-countdown";
 
 export default function Community() {
   const date = new Date();
@@ -45,7 +46,7 @@ export default function Community() {
         <div className="community-time">
           <p>Submission Closes</p>
           <h1>
-            {date.getHours()}:{date.getMinutes()}:{date.getSeconds()}
+            <Countdown date={Date.now() + 77999999} />
           </h1>
         </div>
         <div className="posts-container">
