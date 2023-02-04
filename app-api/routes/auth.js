@@ -4,7 +4,6 @@ const User = require('../models/User')
 // register
 router.post('/register', async (req, res) => {
     try {       
-       
         const newUser = await new User({
             username: req.body.username,
             password: req.body.password,
@@ -16,30 +15,25 @@ router.post('/register', async (req, res) => {
         console.log(err)
     }
 })
-// login
-// router.post('/login', async (req, res) => {
-//     try {
-//         const user = await User.findOne({
-//             username: req.body.username,
-//         })
+//login
+router.post('/login', async (req, res) => {
+    try {
+        const user = await User.findOne({
+            username: req.body.username,
+        })
 
-//         if (!user) {
-//             return res.status(404).json('user not found')
-//         }
-//         else {
-//             const validPassword = await bcrypt.compare(
-//               req.body.password,
-//               user.password
-//             );
-//             if (!validPassword)
-//                 return res.status(404).json("invalid password");
-//         }
-//         res.status(200).json(user)
-//     } catch (err) {
+        if (!user) {
+            return res.status(404).json('user not found')
+        }
+        else {
+            if (req.body.password !== user.password)
+                return res.status(404).json("invalid password");
+        }
+        res.status(200).json(user)
+    } catch (err) {
 
-//         res.status(500).json(err)
-//     }
-// })
-
+        res.status(500).json(err)
+    }
+})
 
 module.exports = router
