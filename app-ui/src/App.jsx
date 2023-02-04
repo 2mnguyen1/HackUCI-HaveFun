@@ -10,17 +10,17 @@ import "./App.css";
 export default function App() {
   return (
     <div>
-        {/* <div>
+        <div>
           <Navbar />
-        </div> */}
+        </div>
 
       <BrowserRouter>
         <Routes>
+         
           <Route
             path="/main"
             element={
               <div>
-                <Navbar />
                   <div className="home-page">
                     <LeftMainPage />
                     <RightMainPage />
