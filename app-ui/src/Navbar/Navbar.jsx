@@ -1,10 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./Navbar.css"
 import { Link } from "react-router-dom";
-import {Dashboard, Forum, AccountBox} from '@mui/icons-material';
+import {Dashboard, Forum, AccountBox, Handyman} from '@mui/icons-material';
 import logo from "../images/helpfun-logo.png"
 
 export default function Navbar() {
+    const styles = {
+        backgroundColor: '#34E0A1'
+    }
   return (
     <div className="navbar">
         <div className='navbar-wrapper'>
@@ -22,10 +25,13 @@ export default function Navbar() {
                 <div className='navbar-element navbar-profile-icon'>
                     <AccountBox />
                 </div>
+                <div className='navbar-element navbar-tool-icon'>
+                    <Handyman />
+                </div>
             </div>
             <div className='navbar-profile'>
-                    
-            </div>
+               
+            </div>  
         </div>
     </div>
   )

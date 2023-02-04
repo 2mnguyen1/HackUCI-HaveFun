@@ -13,7 +13,7 @@
     height: 60%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 .navbar-logo{
@@ -36,7 +36,7 @@
     width: 30%;
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 .navbar-profile{
@@ -51,15 +51,13 @@
 .navbar-element{
     width: 30%;
     height: 100%;
-    background: #34E0A1;
+    background: #A0A4A2;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 10px;
 }
-.navbar-showcase {
-    background: #A0A4A2;
-}
-.navbar-profile-icon {
-    background: #A0A4A2;
+.navbar-element:active {
+    background-color: #34E0A1;
 }
