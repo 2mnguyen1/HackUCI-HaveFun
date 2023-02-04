@@ -1,8 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Login.css";
+import axios from "axios";
 
-export default function Login() {
-  const [isSignUp, setIsSignUp] = useState(false);
+export default function Login({ setUser }) {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  async function getData(e) {
+    e.preventDefault();
+    try {
+      const results = await axios.post("http://localhost:3001/api/auth/login", {
+        username: username,
+        password: password,
+      });
+      setUser(results.data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   return (
     <>
       <div className="login-main">
@@ -15,68 +31,27 @@ export default function Login() {
             <h1>HaveFun</h1>
           </div>
 
-          {!isSignUp && (
-            <form action="" onSubmit={(e) => e.preventDefault()}>
-              <h1>Login</h1>
+          <form action="" onSubmit={getData}>
+            <h1>Login</h1>
 
-              <input className="login-box" type="text" placeholder="Username" />
-              <input
-                className="login-box"
-                type="password"
-                placeholder="Password"
-              />
+            <input
+              className="login-box"
+              type="text"
+              placeholder="Username"
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <input
+              className="login-box"
+              type="password"
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
 
-              <button className="login-btn" type="submit">
-                + LOGIN
-              </button>
-              <button
-                className="signup-btn"
-                onClick={() => {
-                  setIsSignUp(!isSignUp);
-                }}
-              >
-                SIGN UP!
-              </button>
-            </form>
-          )}
-
-          {isSignUp && (
-            <form action="" onSubmit={(e) => e.preventDefault()}>
-              <h1>Sign Up</h1>
-
-              <input className="login-box" type="text" placeholder="Username" />
-              <input
-                className="login-box"
-                type="password"
-                placeholder="Password"
-              />
-
-              <input
-                className="login-box"
-                type="password"
-                placeholder="Confirm Password"
-              />
-
-              <button
-                className="signup-btn"
-                type="submit"
-                onClick={() => {
-                  setIsSignUp(!isSignUp);
-                }}
-              >
-                SIGN UP!
-              </button>
-
-              <button
-                className="signup-btn back-btn"
-                onClick={() => {
-                  setIsSignUp(!isSignUp);
-                }}
-              >
-                BACK
-              </button>
-            </form>
-          )}
+            <button className="login-btn" type="submit">
+              + LOGIN
+            </button>
+            <button className="signup-btn">SIGN UP!</button>
+          </form>
         </div>
         <div className="login-pic">
           <img
