@@ -33,6 +33,8 @@
 
 .community-posts {
   width: 70%;
+  text-align: center;
+  margin-top: 2%;
 }
 .community-posts p {
   color: #5a687b;
@@ -41,10 +43,11 @@
 .posts-container {
   display: grid;
   grid-template-columns: auto auto auto;
+  margin-left: 5%;
 }
 
 .posts-item {
-  width: 90%;
+  width: 85%;
   height: 30vh;
   margin-top: 15%;
   background-color: #eff6ff;
@@ -69,4 +72,37 @@
   border: none;
   align-self: center;
   margin-top: 5%;
+}
+
+.community-time {
+  width: 30%;
+  background-color: #eff6ff;
+  height: 10%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2% auto;
+}
+
+.community-time p {
+  color: black;
+}
+
+.wotd {
+  background-color: #eff6ff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  margin: 2% 0 10% 0;
+  border-radius: 20px;
+  color: black;
+}
+
+.community-posting h1 {
+  color: black;
 }

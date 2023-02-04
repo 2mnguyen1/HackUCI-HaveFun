@@ -11,7 +11,7 @@ export default function Login() {
               src="https://media.discordapp.net/attachments/795161297121574932/1071291088414986280/H-removebg-preview.png"
               alt=""
             />
-            <h1>HelpFun</h1>
+            <h1>HaveFun</h1>
           </div>
 
           <form action="">
