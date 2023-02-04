@@ -18,6 +18,19 @@
 }
 .navbar-logo{
     margin-left: 50px;
+    display: flex;
+    align-items: center;
+
+}
+.navbar-logo-icon { 
+    width: 70px;
+    height: 70px;
+}
+
+.logo-icon-name { 
+    font-size: 30px;
+    margin-left: 10px;
+    font-weight: bold;
 }
 .navbar-elements{
     width: 30%;
