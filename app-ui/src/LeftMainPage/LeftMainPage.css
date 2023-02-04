@@ -1,77 +1,74 @@
 .left-main-post {
-    left: 160px;
-    top: 99px;
-    background: #EFF6FF;
-    border-radius: 28px;
+  left: 160px;
+  top: 99px;
+  background: #eff6ff;
+  border-radius: 28px;
 }
 
 .left-main-wrapper {
-    margin: 20px 0;
+  margin: 20px 0;
 }
-.left-main-posting
-{
-    width: 522px;
-    height: 127px;
-    padding: 10px;
-    background: #EFF6FF;
-    border-radius: 20px;
+.left-main-posting {
+  width: 522px;
+  height: 127px;
+  padding: 10px;
+  background: #eff6ff;
+  border-radius: 20px;
+  margin: 5% 0;
 }
 .post-top {
-    background: #EFF6FF;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 10px;
-    
+  background: #eff6ff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px;
 }
 .post-top-img {
-    width: 53px;
-    height: 53px;
-    left: 1196px;
-    top: 12px;
-    background: #FFFFFF;
-    border-radius: 50%;
-    margin-right: 50px;
-    
+  width: 53px;
+  height: 53px;
+  left: 1196px;
+  top: 12px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin-right: 50px;
 }
 .post-top-input {
-    width: 80%;
-    height: 60%;
-    border: none;
-    border-bottom: 1px solid grey;
-    font-size: 15px;
-    padding-bottom: 40px;
-    background: #EFF6FF;
-    
+  width: 80%;
+  height: 60%;
+  border: none;
+  border-bottom: 1px solid grey;
+  font-size: 15px;
+  padding-bottom: 40px;
+  background: #eff6ff;
 }
 
 .post-top-input:focus {
-    outline: none;
-    font-size: 20px;
+  outline: none;
+  font-size: 20px;
 }
 
 .upload-icon {
-    padding: 0 10px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 .post-bottom-button {
-    height: 25px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 700;
-    color: white;
-    background-color: #34E0A1;
-    cursor: pointer;
-    width: 80%;
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  background-color: #34e0a1;
+  cursor: pointer;
+  width: 80%;
 }
 .post-bottom-button:active {
-    outline: none;
-    transform: scale(0.9);
+  outline: none;
+  transform: scale(0.9);
 }
 
 .upload-icon-mt {
-    margin-left: 10px;
+  margin-left: 10px;
 }
