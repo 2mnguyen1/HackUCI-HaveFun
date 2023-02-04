@@ -10,18 +10,21 @@ import "./App.css";
 export default function App() {
   return (
     <div>
-      <div>
-        <Navbar />
-      </div>
+        {/* <div>
+          <Navbar />
+        </div> */}
 
       <BrowserRouter>
         <Routes>
           <Route
             path="/main"
             element={
-              <div className="home-page">
-                <LeftMainPage />
-                <RightMainPage />
+              <div>
+                <Navbar />
+                  <div className="home-page">
+                    <LeftMainPage />
+                    <RightMainPage />
+                  </div>
               </div>
             }
           />
