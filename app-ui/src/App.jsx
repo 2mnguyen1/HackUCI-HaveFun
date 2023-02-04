@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, r } from "react-router-dom";
 import Login from "./LoginPage/Login";
 import Navbar from "./Navbar/Navbar";
 import LeftMainPage from "./LeftMainPage/LeftMainPage";
@@ -10,21 +10,19 @@ import "./App.css";
 export default function App() {
   return (
     <div>
+      <BrowserRouter>
         <div>
           <Navbar />
         </div>
-
-      <BrowserRouter>
         <Routes>
-         
           <Route
             path="/main"
             element={
               <div>
-                  <div className="home-page">
-                    <LeftMainPage />
-                    <RightMainPage />
-                  </div>
+                <div className="home-page">
+                  <LeftMainPage />
+                  <RightMainPage />
+                </div>
               </div>
             }
           />
