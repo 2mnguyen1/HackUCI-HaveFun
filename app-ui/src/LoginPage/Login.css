@@ -1,0 +1,62 @@
+.login-input {
+  margin: 5% auto;
+  width: 45vw;
+  min-height: 100%;
+  background-color: white;
+  text-align: center;
+}
+
+.login-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+
+.login-logo img {
+  width: 20%;
+  padding-right: 10px;
+}
+
+.login-logo h1 {
+  width: 20%;
+  text-align: left;
+  font-size: 2.5rem;
+}
+
+.login-pic {
+  width: 55vw;
+  min-height: 100%;
+  background-color: #34e0a1;
+  background-image: url("https://media.discordapp.net/attachments/795161297121574932/1071307510566371378/Frame_2608633.png");
+}
+
+.login-main {
+  display: flex;
+}
+
+.login-box {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 3% auto;
+
+  height: 5vh;
+  width: 60%;
+
+  /* Gray */
+
+  background: #eae7e7;
+  border-radius: 5px;
+  border: none;
+}
+
+.login-btn {
+  width: 30%;
+  height: 5vh;
+  border-radius: 5px;
+  background: #34e0a1;
+  border: none;
+}
