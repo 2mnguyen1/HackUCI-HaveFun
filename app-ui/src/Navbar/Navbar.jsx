@@ -1,9 +1,8 @@
 import React from 'react'
 import "./Navbar.css"
 import { Link } from "react-router-dom";
-import dashboard_icon from "../images/dashboard.png"
-import group_icon from "../images/group.png"
-import use_icon from "../images/user-icon.png"
+import {Dashboard, Forum, AccountBox} from '@mui/icons-material';
+
 
 export default function Navbar() {
   return (
@@ -15,17 +14,17 @@ export default function Navbar() {
             </div>
             <div className='navbar-elements'>
                 <div className='navbar-element navbar-home'>
-                    <img className='navbar-home-icon' alt="" src={dashboard_icon} />
+                    <Dashboard />
                 </div>
                 <div className='navbar-element navbar-showcase'>
-                    <img className='navbar-showcase-icon' alt="" src={group_icon} />
+                    <Forum />
                 </div>
                 <div className='navbar-element navbar-profile-icon'>
-                    <img className='navbar-profile-icon' alt="" src={use_icon}/>
+                    <AccountBox />
                 </div>
             </div>
             <div className='navbar-profile'>
-                <img className='navbar-img' alt="" src={''}/>
+                    
             </div>
         </div>
     </div>
