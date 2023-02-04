@@ -4,6 +4,7 @@ import Login from "./LoginPage/Login";
 import Navbar from "./Navbar/Navbar";
 import LeftMainPage from "./LeftMainPage/LeftMainPage";
 import RightMainPage from "./RightMainPage/RightMainPage";
+import Community from "./Community/Community";
 import "./App.css";
 
 export default function App() {
@@ -11,16 +12,19 @@ export default function App() {
     <div>
       <div>
         <Navbar />
-
-        <div className="home-page">
-          <LeftMainPage />
-          <RightMainPage />
-        </div>
       </div>
 
       <BrowserRouter>
         <Routes>
-          <Route path="/main" element={<LeftMainPage />} />
+          <Route
+            path="/main"
+            element={
+              <div className="home-page">
+                <LeftMainPage />
+                <RightMainPage />
+              </div>
+            }
+          />
           <Route path="/login" element={<Login />} />
           <Route path="/community" element={<Community />} />
         </Routes>
