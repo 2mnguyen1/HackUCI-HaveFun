@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Login.css";
 
 export default function Login() {
+  const [isSignUp, setIsSignUp] = useState(false);
   return (
     <>
       <div className="login-main">
@@ -14,19 +15,68 @@ export default function Login() {
             <h1>HaveFun</h1>
           </div>
 
-          <form action="">
-            <h1>Login/Register</h1>
+          {!isSignUp && (
+            <form action="" onSubmit={(e) => e.preventDefault()}>
+              <h1>Login</h1>
 
-            <input className="login-box" type="text" placeholder="Username" />
-            <input
-              className="login-box"
-              type="password"
-              placeholder="Password"
-            />
-            <button className="login-btn" type="submit">
-              + LOGIN
-            </button>
-          </form>
+              <input className="login-box" type="text" placeholder="Username" />
+              <input
+                className="login-box"
+                type="password"
+                placeholder="Password"
+              />
+
+              <button className="login-btn" type="submit">
+                + LOGIN
+              </button>
+              <button
+                className="signup-btn"
+                onClick={() => {
+                  setIsSignUp(!isSignUp);
+                }}
+              >
+                SIGN UP!
+              </button>
+            </form>
+          )}
+
+          {isSignUp && (
+            <form action="" onSubmit={(e) => e.preventDefault()}>
+              <h1>Sign Up</h1>
+
+              <input className="login-box" type="text" placeholder="Username" />
+              <input
+                className="login-box"
+                type="password"
+                placeholder="Password"
+              />
+
+              <input
+                className="login-box"
+                type="password"
+                placeholder="Confirm Password"
+              />
+
+              <button
+                className="signup-btn"
+                type="submit"
+                onClick={() => {
+                  setIsSignUp(!isSignUp);
+                }}
+              >
+                SIGN UP!
+              </button>
+
+              <button
+                className="signup-btn back-btn"
+                onClick={() => {
+                  setIsSignUp(!isSignUp);
+                }}
+              >
+                BACK
+              </button>
+            </form>
+          )}
         </div>
         <div className="login-pic">
           <img

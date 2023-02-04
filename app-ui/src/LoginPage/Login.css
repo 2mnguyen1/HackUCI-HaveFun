@@ -66,3 +66,18 @@
 .login-btn:active {
   transform: scale(0.9);
 }
+
+.signup-btn {
+  background-color: #a6fcdc;
+  width: 30%;
+  margin-left: 2%;
+  height: 5vh;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.back-btn {
+  background-color: #fcb3a6;
+}
