@@ -10,11 +10,7 @@ const MemePostSchema = new mongoose.Schema({
         type: String,
         default: ""
     },
-    title: {
-        type: String,
-        default: "No Title"
-    },
-
+    
     description: {
         type: String,
         default: ""
@@ -22,7 +18,6 @@ const MemePostSchema = new mongoose.Schema({
     like: {
         type: Number,
         default: 0,
-        
     },
 
 }, {timestamps: true})

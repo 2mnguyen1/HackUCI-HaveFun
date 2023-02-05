@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const authRoute = require("./routes/auth");
 const postRoute = require("./routes/posts");
+const memeRoute = require("./routes/memes")
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 mongoose.set("strictQuery", true);
@@ -18,6 +19,8 @@ app.use(cors());
 
 app.use("/api/auth", authRoute);
 app.use("/api/post", postRoute);
+app.use("/api/meme", memeRoute);
+
 
 app.get("/", (req, res) => {
   res.send("Hello World");

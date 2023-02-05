@@ -29,7 +29,29 @@ router.get("/todo/all", async (req, res) => {
 //get all Todo
 router.get("/todo/:userId/all", async (req, res) => {
   try {
-    const allTodo = await Todo.find({userId: req.params.userId});
+    const allTodo = await Todo.find({ userId: req.params.userId });
+    res.status(200).json(allTodo);
+  } catch (e) {
+    console.log(e);
+    res.status(500).json(e);
+  }
+});
+
+router.get("/todo/:userId/:id", async (req, res) => {
+  try {
+    const allTodo = await Todo.findByIdAndUpdate(req.params.id, {
+      isDone: true,
+    });
+    res.status(200).json(allTodo);
+  } catch (e) {
+    console.log(e);
+    res.status(500).json(e);
+  }
+});
+
+router.post("/todo/:userId/:id", async (req, res) => {
+  try {
+    const allTodo = await Todo.findByIdAndDelete(req.params.id);
     res.status(200).json(allTodo);
   } catch (e) {
     console.log(e);
@@ -53,6 +75,16 @@ router.post("/posting", async (req, res) => {
 router.get("/timeline", async (req, res) => {
   try {
     const allPosts = await UserPost.find({});
+    res.status(200).json(allPosts);
+  } catch (e) {
+    console.log(e);
+    res.status(500).json(e);
+  }
+});
+
+router.delete("/timeline", async (req, res) => {
+  try {
+    const allPosts = await UserPost.deleteMany({});
     res.status(200).json(allPosts);
   } catch (e) {
     console.log(e);
@@ -97,10 +129,30 @@ router.get("/profile/:username", async (req, res) => {
   }
 });
 
+router.post("/profilePic/:userId", async (req, res) => {
+  try {
+    const user = await User.findByIdAndUpdate(req.params.userId, {
+      profilePicture: req.body.profilePicture,
+    });
+    res.status(200).json(user);
+  } catch (e) {
+    res.status(500).json(e);
+  }
+});
+
 // get username from a post
 router.get("/username/:userId", async (req, res) => {
   try {
     const user = await User.findOne({ _id: req.params.userId });
+    res.status(200).json(user);
+  } catch (e) {
+    res.status(500).json(e);
+  }
+});
+
+router.get("/userss", async (req, res) => {
+  try {
+    const user = await User.find({});
     res.status(200).json(user);
   } catch (e) {
     res.status(500).json(e);

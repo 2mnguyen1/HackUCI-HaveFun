@@ -1,6 +1,27 @@
 .comments-container {
-  background-color: lightblue;
+  background-color: rgb(219, 238, 245);
   height: 300px;
   overflow-y: scroll;
   border-radius: 10px;
+}
+
+.infoForm {
+  background-color: rgb(209, 213, 216);
+  padding: 10px;
+}
+
+.infoForm input {
+  height: 30px;
+  border-radius: 10px;
+  border: 0;
+  margin-right: 5px;
+}
+
+.comments {
+  max-width: 30%;
+  height: 40px;
+  margin: 2% 0;
+  background-color: rgb(192, 240, 192);
+  border-radius: 20px;
+  padding: 5px 0 0 10px;
 }

@@ -39,29 +39,25 @@
 .community-posts p {
   color: #5a687b;
 }
-
-.posts-container {
+.posts-item-container {
   display: grid;
   grid-template-columns: auto auto auto;
   margin-left: 5%;
 }
 
-.posts-item {
-  width: 85%;
-  height: 30vh;
-  margin-top: 15%;
-  background-color: #eff6ff;
-  border-radius: 20px;
-}
-
 .img-btn {
-  font-size: 2rem;
-  width: 50px;
-  border-radius: 10px;
+  font-size: 1rem;
+  height: 30px;
+  width: 300px;
+  border-radius: 5px;
   border: none;
   align-self: center;
   background-color: #eff6ff;
   margin: 5% 0;
+  transition: 180ms box-shadow ease-in-out;
+}
+.img-btn:focus {
+  outline: 3px solid transparent;
 }
 
 .form-btn {
@@ -105,4 +101,14 @@
 
 .community-posting h1 {
   color: black;
+}
+
+.meme-textarea {
+  padding-top: 30px;
+  font-size: 20px;
+  width: 300px;
+  height: 200px;
+}
+.meme-textarea:focus {
+  outline: 3px solid transparent;
 }

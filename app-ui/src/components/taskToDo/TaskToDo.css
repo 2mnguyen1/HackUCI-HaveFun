@@ -1,5 +1,5 @@
 .task-to-do-container {
-  width: 344px;
+  width: 100%;
   left: 791px;
   top: 170px;
   background: #eff6ff;
@@ -25,4 +25,11 @@
 }
 .task-to-do-buttons div {
   margin: 0 20px;
+  font-weight: bolder;
+  transition: 0.1s ease;
+  cursor: pointer;
+}
+
+.task-to-do-buttons div:hover {
+  border-bottom: 3px solid ;
 }

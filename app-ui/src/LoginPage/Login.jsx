@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Login.css";
 import axios from "axios";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 export default function Login({ setUser, setToken }) {
   const [username, setUsername] = useState("");
@@ -14,8 +15,8 @@ export default function Login({ setUser, setToken }) {
         username: username,
         password: password,
       });
-      setToken("test123");
       setUser(results.data);
+      window.localStorage.setItem("MY-USER", JSON.stringify(results.data));
     } catch (err) {
       console.log(err);
     }
@@ -41,19 +42,23 @@ export default function Login({ setUser, setToken }) {
               type="text"
               placeholder="Username"
               onChange={(e) => setUsername(e.target.value)}
+              required
             />
             <input
               className="login-box"
               type="password"
               placeholder="Password"
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
 
             <div>
               <button className="login-btn" type="submit">
                 + LOGIN
               </button>
-              <button className="signup-btn">SIGN UP!</button>
+              <Link to="/register">
+                <button className="signup-btn">SIGN UP!</button>
+              </Link>
             </div>
           </form>
         </div>

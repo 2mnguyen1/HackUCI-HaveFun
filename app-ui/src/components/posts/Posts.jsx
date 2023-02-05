@@ -31,7 +31,9 @@ export default function Posts(post) {
   }
 
   async function uploadComments(e) {
-    setCommentsArray(prev => {return [...prev, comments]});
+    setCommentsArray((prev) => {
+      return [...prev, comments];
+    });
     e.preventDefault();
     await axios.post(
       `http://localhost:3001/api/post/${post.post._id}/comments`,
@@ -43,7 +45,7 @@ export default function Posts(post) {
 
   return (
     <div className="post-container">
-      <div className="post-wrapper">
+      <div className="post-wrapper2">
         <div className="user-post-top">
           {person.profilePicture ? (
             <img
@@ -62,7 +64,7 @@ export default function Posts(post) {
           </div>
         </div>
         <div className="user-post-description">
-          {`Title: ${post.post.title} ${post.post.description}`}
+          {`${post.post.description}`}
         </div>
         <img
           className="user-post-image"
@@ -71,7 +73,7 @@ export default function Posts(post) {
         />
         <div>
           <button onClick={likePost} className="user-post-button">
-            👍 {likeNumbers}{" "}
+            <h2 className="like-btn">🥰 {likeNumbers} </h2>
           </button>
           <button
             className="user-post-button"
@@ -79,7 +81,7 @@ export default function Posts(post) {
               setIsComment(!isComment);
             }}
           >
-            💭
+            <h2 className="like-btn">💭</h2>
           </button>
         </div>
 

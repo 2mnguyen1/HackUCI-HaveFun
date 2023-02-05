@@ -19,20 +19,42 @@ export default function RightMainPage({ user }) {
   }, []);
 
   async function uploadTodo(e) {
-    e.preventDefault();
     await axios.post("http://localhost:3001/api/post/todo/post/", {
       userId: user._id,
       title: title,
       description: description,
     });
 
-    setTasks(prev=>{return [...prev, {userId: user._id,
-      title: title, 
-      description: description}]})
+    setTasks((prev) => {
+      return [
+        ...prev,
+        { userId: user._id, title: title, description: description },
+      ];
+    });
+    window.location.reload();
   }
 
+  async function deleteTodo(id) {
+    await axios.post(`http://localhost:3001/api/post/todo/${user._id}/${id}`);
+  }
+
+  async function doneTodo(id) {
+    await axios.get(`http://localhost:3001/api/post/todo/${user._id}/${id}`);
+  }
   const tasksDisplay = tasks.map((ele) => {
-    return <TaskToDo title={ele.title} description={ele.description} />;
+    return (
+      ele._id && (
+        <TaskToDo
+          title={ele.title}
+          description={ele.description}
+          deleteTodo={deleteTodo}
+          id={ele._id}
+          setTasks={setTasks}
+          doneTodo={doneTodo}
+          isDone={ele.isDone}
+        />
+      )
+    );
   });
 
   return (
@@ -42,22 +64,24 @@ export default function RightMainPage({ user }) {
         <form className="form2" onSubmit={uploadTodo}>
           <input
             type="text"
-            placeholder="title"
+            placeholder="Title"
             onChange={(e) => {
               setTitle(e.target.value);
             }}
+            required
           />
           <textarea
             type="text"
-            placeholder="description"
+            placeholder="Description"
             onChange={(e) => {
               setDescription(e.target.value);
             }}
+            required
           />
           <button type="submit">Post</button>
         </form>
       </div>
-      {tasksDisplay}
+      {tasksDisplay.reverse()}
     </div>
   );
 }

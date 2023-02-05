@@ -3,6 +3,7 @@ import "./LeftMainPage.css";
 import AddPhotoAlternateIcon from "@mui/icons-material/AddPhotoAlternate";
 import Posts from "../components/posts/Posts";
 import axios from "axios";
+import NoAccountsIcon from "@mui/icons-material/NoAccounts";
 
 export default function LeftMainPage(user) {
   const [allPosts, setAllPosts] = useState([]);
@@ -44,6 +45,15 @@ export default function LeftMainPage(user) {
               placeholder="URL"
               value={imgUrl}
             />
+            <img
+              className="popup-img"
+              src={
+                imgUrl === ""
+                  ? "https://media.discordapp.net/attachments/688278789566103604/1071710018623246346/image.png"
+                  : imgUrl
+              }
+              alt=""
+            />
             <div className="popup-btn">
               <button
                 onClick={() => {
@@ -65,13 +75,22 @@ export default function LeftMainPage(user) {
         <div className="left-main-wrapper">
           <div className="left-main-posting">
             <div className="post-top">
-              <div className="post-top-img"></div>
+              {user.user.profilePicture ? (
+                <img
+                  className="post-top-img"
+                  src={user.user.profilePicture}
+                  alt=""
+                />
+              ) : (
+                <NoAccountsIcon sx={{ fontSize: 40 }} />
+              )}
+
               <input
                 type="text"
                 className="post-top-input"
                 id="lname"
                 name="lname"
-                placeholder="How can we help you?"
+                placeholder="Share your Fun!!"
                 onChange={(e) => {
                   setpostDescription(e.target.value);
                 }}
