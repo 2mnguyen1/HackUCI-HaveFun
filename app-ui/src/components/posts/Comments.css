@@ -1,0 +1,6 @@
+.comments-container {
+  background-color: lightblue;
+  height: 300px;
+  overflow-y: scroll;
+  border-radius: 10px;
+}

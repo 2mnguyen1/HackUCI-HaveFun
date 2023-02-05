@@ -72,3 +72,45 @@
 .upload-icon-mt {
   margin-left: 10px;
 }
+
+.img-popup {
+  width: 700px;
+  height: 300px;
+  position: absolute;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  border-radius: 64px;
+  background: #eee7e7;
+  box-shadow: 31px 31px 73px #7e7a7a, -31px -31px 73px #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  align-items: center;
+}
+
+.img-popup input {
+  width: 40%;
+  height: 40%;
+  border: 0;
+  border-radius: 20px;
+  margin: 5% 0;
+  padding-left: 10px;
+}
+
+.img-popup button {
+  width: 10%;
+  height: 50px;
+  border-radius: 64px;
+  background: rgb(245, 224, 224);
+
+  border: rgb(182, 66, 66) 1px solid;
+  margin: 0 5%;
+}
+
+.popup-btn {
+  width: 70%;
+}

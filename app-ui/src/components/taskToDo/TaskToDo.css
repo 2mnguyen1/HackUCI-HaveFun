@@ -1,29 +1,28 @@
 .task-to-do-container {
-    width: 344px;
-    height: 179px;
-    left: 791px;
-    top: 170px;
-    background: #EFF6FF;
-    border-radius: 28px;
-    margin-bottom: 20px;
-
+  width: 344px;
+  left: 791px;
+  top: 170px;
+  background: #eff6ff;
+  border-radius: 28px;
+  margin-bottom: 20px;
+  padding: 20px 0;
 }
 .task-to-do-description {
-    height: 80%;
-    color: #64748B;
+  height: 80%;
+  color: #64748b;
 }
 .task-to-do-contents {
-    display: flex;
-    height: 90%;
-    flex-direction: column;
-    padding: 5px 20px;
-    justify-content: space-between;
+  display: flex;
+  height: 90%;
+  flex-direction: column;
+  padding: 5px 20px;
+  justify-content: space-between;
 }
 .task-to-do-buttons {
-    display: flex;
-    justify-content: flex-end;
-    color: #34E0A1;
+  display: flex;
+  justify-content: flex-end;
+  color: #34e0a1;
 }
 .task-to-do-buttons div {
-    margin: 0 20px;
+  margin: 0 20px;
 }

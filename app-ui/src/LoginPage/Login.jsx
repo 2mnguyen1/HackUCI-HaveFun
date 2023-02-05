@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Login.css";
 import axios from "axios";
+import PropTypes from "prop-types";
 
-export default function Login({ setUser }) {
+export default function Login({ setUser, setToken }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -13,6 +14,7 @@ export default function Login({ setUser }) {
         username: username,
         password: password,
       });
+      setToken("test123");
       setUser(results.data);
     } catch (err) {
       console.log(err);
@@ -47,10 +49,12 @@ export default function Login({ setUser }) {
               onChange={(e) => setPassword(e.target.value)}
             />
 
-            <button className="login-btn" type="submit">
-              + LOGIN
-            </button>
-            <button className="signup-btn">SIGN UP!</button>
+            <div>
+              <button className="login-btn" type="submit">
+                + LOGIN
+              </button>
+              <button className="signup-btn">SIGN UP!</button>
+            </div>
           </form>
         </div>
         <div className="login-pic">
@@ -63,3 +67,7 @@ export default function Login({ setUser }) {
     </>
   );
 }
+
+Login.propTypes = {
+  setToken: PropTypes.func.isRequired,
+};

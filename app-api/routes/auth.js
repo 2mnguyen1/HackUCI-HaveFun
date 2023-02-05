@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
 const UserPost = require("../models/UserPost");
+const jwt = require("jsonwebtoken");
+
 // register
 router.post("/register", async (req, res) => {
   try {
@@ -10,7 +12,7 @@ router.post("/register", async (req, res) => {
       password: req.body.password,
       profilePicture: req.body.profilePicture,
     });
-    const user = await newUser.save();
+    const user = await newUser.save();  
     res.status(200).json(user);
   } catch (err) {
     console.log(err);
@@ -29,12 +31,13 @@ router.post("/login", async (req, res) => {
       if (req.body.password !== user.password)
         return res.status(404).json("invalid password");
     }
-    res.status(200).json(user);
+
+    const token = jwt.sign({ id: user._id }, "secretKey");
+
+    res.cookie("access_token", token).status(200).json(user);
   } catch (err) {
     res.status(500).json(err);
   }
 });
-
-
 
 module.exports = router;

@@ -1,14 +1,9 @@
 const mongoose = require('mongoose');
 
-const MemePostSchema = new mongoose.Schema({
+const TodoSchema = new mongoose.Schema({
     userId: {
         type: String,
         required: true,
-
-    },
-    picture: {
-        type: String,
-        default: ""
     },
     title: {
         type: String,
@@ -19,12 +14,13 @@ const MemePostSchema = new mongoose.Schema({
         type: String,
         default: ""
     },
-    like: {
-        type: Number,
-        default: 0,
-        
-    },
+
+    isDone:{
+        type: Boolean,
+        default: false,
+    }
+
 
 }, {timestamps: true})
 
-module.exports = mongoose.model("MemePost", MemePostSchema)
+module.exports = mongoose.model("Todo", TodoSchema)
