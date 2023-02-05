@@ -36,7 +36,7 @@ export default function ({ meme }) {
               : "https://th.bing.com/th/id/R.62d6f2ff829d7063e4281f7e59db7987?rik=UgzJAgN52ZfQnQ&riu=http%3a%2f%2fwww.drodd.com%2fimages11%2fmeme-faces1.png&ehk=DgWm8ubcWcUDHeSS0I7MeAPtDphp3mkssvAyPQ7Xll0%3d&risl=&pid=ImgRaw&r=0"
           }
         />
-        <p>✔️ This is discription{meme.description}</p>
+        <p>✔️{meme.description}</p>
 
         <div className="meme-author">@{username}</div>
       </div>

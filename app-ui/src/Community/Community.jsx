@@ -78,7 +78,7 @@ export default function Community({ user }) {
               onChange={(e) => setDesc(e.target.value)}
               value={desc}
               placeholder="Write!"
-              required
+              
             />
             <button className="form-btn" type="submit">
               + POST
