@@ -28,3 +28,4 @@ javascript
 mongodb
 node.js
 react
+mongoose
